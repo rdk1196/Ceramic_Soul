@@ -91,22 +91,29 @@
 	<section class="git">
 		<div class="container">
 			<h2 class="title-h2">get in touch</h2>
-
 			<div class="pure-g git__wrapper">
-
-				<div class="pure-u-xl-1-2 pure-u-xxl-2-5 git__img">
-					<img src="/src/img/form/tea.jpg" alt="tea" class="tea">
+				<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
+					<img class="git__img" src="/src/img/form/tea.jpg" alt="tea" />
 				</div>
-
-				<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-3-5 git__form">
+				<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-3-5">
+					<form action="#">
+						<fieldset class="git__fieldset">
+							<div class="git__input-block">
+								<label class="git__label" for="name">Name</label>
+								<input class="git__input" type="text" id="name" name="name" placeholder="Name">
+							</div>
+							<div class="git__input-block">
+								<label class="git__label" for="email">Email</label>
+								<input class="git__input" type="email" id="email" name="email" placeholder="Email">
+							</div>
+						</fieldset>
+						<label class="git__label" for="question">Your question</label>
+						<textarea class="git__textarea" name="question" id="question" placeholder="Question"></textarea>
+					</form>
 					<button class="btn-send git__btn">send request</button>
-					<img src="/src/img/form/vase.png" alt="vase" class="git__iconVase">
+					<img class="git__iconVase" src="/src/img/form/vase.png" alt="vase">
 				</div>
 			</div>
-
-
-
-
 		</div>
 	</section>
 
