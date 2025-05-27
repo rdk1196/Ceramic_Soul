@@ -19,6 +19,12 @@
         outline: 1px solid $ceramic;
         border: 1px solid $ceramic;
     }
+
+    &:disabled {
+        border: 1px solid $ui-disabled;
+        border-radius: 2px;
+        color: $ui-disabled;
+    }
 }
 
 

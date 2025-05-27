@@ -11,6 +11,7 @@
         display: none;
     }
 
+
     &__fieldset {
         border: none;
         margin: 0;
@@ -91,7 +92,8 @@
         margin-top: 20px;
     }
 
-    &__iconVase {
+
+    &__vase {
         display: none;
     }
 }
@@ -100,18 +102,28 @@
     .git {
         &__wrapper {
             margin-top: 45px;
+
         }
 
         &__form {
             position: relative;
             padding-left: 24px;
+            padding-right: 79px;
         }
 
-        &__iconVase {
-            position: absolute;
-            bottom: 0;
-            right: 6px;
+        &__input {
+            width: 300px;
+        }
+
+        &__textarea {
+            width: 300px;
+        }
+
+        &__vase {
             display: block;
+            position: absolute;
+            right: 79px;
+            bottom: 0;
         }
 
 
@@ -120,6 +132,12 @@
 
 @media screen and (min-width: 1200px) {
     .git {
+
+        &__wrapper {
+            margin-top: 80px;
+            padding-left: 0;
+        }
+
         &__img {
             display: block;
             width: 550px;
@@ -143,6 +161,17 @@
 @media screen and (min-width: 1920px) {
     .git {
         padding-top: 100px;
+
+        &__form {
+            padding-left: 147px;
+        }
+
+        &__fieldset {
+            display: flex;
+            // justify-content: space-between;
+            gap: 45px;
+
+        }
 
         &__img {
             width: 100%;
