@@ -108,21 +108,14 @@
         &__form {
             position: relative;
             padding-left: 24px;
-            padding-right: 79px;
-        }
-
-        &__input {
             width: 300px;
-        }
 
-        &__textarea {
-            width: 300px;
         }
 
         &__vase {
             display: block;
             position: absolute;
-            right: 79px;
+            right: 0;
             bottom: 0;
         }
 
@@ -154,6 +147,10 @@
             }
         }
 
+        &__form {
+            padding-left: 20px;
+        }
+
 
     }
 }
@@ -163,14 +160,20 @@
         padding-top: 100px;
 
         &__form {
+            width: auto;
             padding-left: 147px;
         }
 
         &__fieldset {
             display: flex;
-            // justify-content: space-between;
             gap: 45px;
+        }
 
+        &__label,
+        &__check-block,
+        &__input,
+        &__textarea {
+            width: 300px;
         }
 
         &__img {
