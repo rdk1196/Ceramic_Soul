@@ -1,17 +1,14 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .footer {
-    margin-top: 85px;
+    margin-top: 60px;
     background-color: $dark;
 
     &__wrapper {
         padding-top: 50px;
     }
 
-    &__newsletter {
-        width: 293px;
-        height: 258px;
-    }
+
 
     &__header {
         font-weight: 500;
@@ -31,6 +28,7 @@
     &__input {
         margin-top: 40px;
         width: 293px;
+        padding-bottom: 15px;
         font-weight: 400;
         font-size: 14px;
         background-color: transparent;
@@ -72,22 +70,23 @@
         margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
-        gap: 66px;
-        width: 212px;
-        height: 236px;
+        column-gap: 66px;
+        row-gap: 40px;
     }
 
     &__nav {
         margin-top: 40px;
 
         ul {
-            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            padding: 0;
+            list-style-type: none;
         }
     }
 
     &__link {
-        list-style-type: none;
-
         a {
             font-weight: 400;
             font-size: 16px;
@@ -98,23 +97,26 @@
 
     &__social {
         margin-top: 40px;
-        width: 92px;
-        height: 83px;
-    }
 
-    &__social-block {
-        margin-top: 40px;
-        padding: 0;
-        display: flex;
-        list-style-type: none;
+        &-block {
+            margin-top: 40px;
+            padding: 0;
+            display: flex;
+            column-gap: 10px;
+            list-style-type: none;
 
-        a {
-            display: block;
-            text-decoration: none;
-            color: $light;
-            width: 24px;
-            height: 24px;
+            a {
+                display: block;
+                text-decoration: none;
+                color: $light;
+                font-size: 24px;
+            }
+
+            span:before {
+                margin: 0;
+            }
         }
+
     }
 
     &__copyright {
@@ -131,54 +133,40 @@
     .footer {
 
         &__wrapper {
-            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
-        &__links {
-            width: 428px;
-            height: 118px;
+        &__newsletter {
+            width: 100%;
         }
 
-        &__social {
-            position: absolute;
-            top: 50%;
-            transform: translate(20%);
-            right: 0;
+        &__copyright {
+            margin-top: 50px;
         }
+
     }
 }
 
 @media screen and (min-width: 1200px) {
     .footer {
-        &__wrapper {
-            display: flex;
-            justify-content: space-between;
-
-            >*:not(:last-child) {
-                margin-right: 164px;
-            }
+        &__newsletter {
+            width: auto;
         }
 
-        &__social {
-            position: static;
-            transform: none;
-        }
-
-        &__copyright {
-            margin-top: 50px;
+        &__social,
+        &__links {
+            margin-top: 0;
         }
     }
 }
 
 @media screen and (min-width: 1920px) {
     .footer {
-        margin-top: 125px;
+        padding-top: 80px;
 
-        &__wrapper {
-            >*:not(:last-child) {
-                margin-right: 313px;
-            }
-        }
+
 
         &__copyright {
             margin-top: 18px;
