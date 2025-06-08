@@ -31,6 +31,63 @@
     &__nav {
         display: none;
     }
+
+    &__menu {
+        padding: 50px 10px;
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        // 100 vw (view width) = оталкиваеться на 100% от ширины монитора а не от элем родителя//
+        width: 100vw;
+        height: 100vh;
+        background-color: $light;
+        transition: transform 0.3s;
+
+        &_active {
+            transform: translateX(100%);
+        }
+
+        &-close {
+            width: 20px;
+            height: 20px;
+
+            span {
+                display: block;
+                width: 20px;
+                height: 1px;
+                background-color: $dark;
+
+                &:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(8px) rotate(-45deg);
+                }
+            }
+        }
+
+        &-nav {
+            margin-top: 50px;
+            padding-left: 14px;
+
+            ul {
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                row-gap: 25px;
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $dark;
+        }
+    }
 }
 
 .burger {
@@ -73,11 +130,16 @@
             color: $dark;
             text-decoration: none;
         }
+
+        &__menu {
+            display: none;
+        }
     }
 
     .burger {
         visibility: hidden;
     }
+
 }
 
 @media screen and (min-width: 1920px) {
