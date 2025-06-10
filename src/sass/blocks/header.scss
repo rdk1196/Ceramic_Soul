@@ -42,6 +42,8 @@
         height: 100vh;
         background-color: $light;
         transition: transform 0.3s;
+        //z-index: 100; перекрывает все элементы расположены ниже// 
+        z-index: 1000;
 
         &_active {
             transform: translateX(100%);
