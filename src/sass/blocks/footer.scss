@@ -1,7 +1,11 @@
 @use "/src/sass/base/variables.scss" as *;
 
-.footer {
+.spaced {
     margin-top: 60px;
+}
+
+.footer {
+
     background-color: $dark;
 
     &__wrapper {
@@ -163,6 +167,10 @@
 }
 
 @media screen and (min-width: 1920px) {
+    .spaced {
+        margin-top: 105px;
+    }
+
     .footer {
         padding-top: 80px;
 

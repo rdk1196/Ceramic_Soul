@@ -1,7 +1,6 @@
 @use "/src/sass/base/mixins.scss" as *;
 @use "/src/sass/base/variables.scss" as *;
 
-
 .btn-default {
     @include button;
     width: 230px;
@@ -14,15 +13,36 @@
     width: 220px;
     height: 40px;
     font-size: 16px;
+}
 
+.btn-read {
+    @include button;
+    width: 145px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    @include button;
+    border: 1px solid $light;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    color: $light;
+}
+
+.btn-send,
+.btn-read {
     &:focus {
         outline: 1px solid $ceramic;
         border: 1px solid $ceramic;
     }
+}
 
+.btn-submit,
+.btn-send {
     &:disabled {
         border: 1px solid $ui-disabled;
-        border-radius: 2px;
         color: $ui-disabled;
     }
 }
@@ -43,7 +63,8 @@
         }
     }
 
-    .btn-send {
+    .btn-send,
+    .btn-read {
         &:hover {
             border: 1px solid $ceramic;
             color: $ceramic;
@@ -60,23 +81,5 @@
     .btn-default {
         width: 330px;
         height: 60px;
-    }
-
-}
-
-.btn-submit {
-    border: 1px solid $light;
-    border-radius: 2px;
-    width: 90px;
-    height: 40px;
-    font-weight: 400;
-    font-size: 16px;
-    text-transform: uppercase;
-    background-color: transparent;
-    color: $light;
-
-    &:disabled {
-        border: 1px solid $ui-disabled;
-        color: $ui-disabled;
     }
 }
