@@ -7,22 +7,23 @@
         margin-top: 60px;
     }
 
+    &__img {
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
     &__block {
         margin-top: 60px;
         row-gap: 35px;
+    }
 
-        &-text {
-            display: flex;
-            flex-direction: column;
-            row-gap: 20px;
-            font-weight: 400;
-            font-size: 16px;
-            color: $dark;
-
-            word-break: break-word;
-            overflow-wrap: break-word;
-            white-space: normal;
-        }
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+        color: $dark;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
     }
 }
 
@@ -30,8 +31,7 @@
     .info {
         &__block {
             &-img {
-                width: 600px;
-                margin: 0 auto;
+                padding: 0 60px;
             }
         }
     }
@@ -40,17 +40,11 @@
 @media screen and (min-width: 1200px) {
     .info {
         &__block {
-            column-gap: 20px;
+            column-gap: 0px;
 
             &-img {
-                width: 550px;
-                height: 378px;
-                margin: 0;
+                padding: 0 20px 0 0;
             }
-        }
-
-        &__img {
-            object-fit: cover;
         }
     }
 }
@@ -65,16 +59,10 @@
 
         &__block {
             margin-top: 100px;
+        }
 
-            &-img {
-                width: 700px;
-                height: 481px;
-            }
-
-            &-text {
-                font-size: 20px;
-                row-gap: 28px;
-            }
+        p {
+            font-size: 20px;
         }
     }
 }
