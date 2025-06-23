@@ -8,7 +8,12 @@
 
     .just-validate-error-field {
         border: none;
-        outline: 1px solid $ui-error;
+        border-bottom: 1px solid $ui-error;
+        color: $light;
+
+        &::placeholder {
+            color: $ui-error;
+        }
     }
 
     background-color: $dark;
@@ -43,6 +48,7 @@
         background-color: transparent;
         border: none;
         border-bottom: 1px solid $ui-active;
+        color: $light;
 
         &::placeholder {
             color: $ui-active;
