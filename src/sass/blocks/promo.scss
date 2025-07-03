@@ -74,8 +74,17 @@
             height: 633px;
             visibility: visible;
         }
+
+        &__cta {
+            // animation-name: slideIn;
+            // animation-duration: 3s;
+            animation: slideIn 3s;
+
+        }
     }
 }
+
+
 
 @media screen and (min-width: 1920px) {
     .promo {

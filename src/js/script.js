@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import "/src/sass/style.scss";
 
+
 const burger = document.querySelector(".burger"),
     close = document.querySelector(".header__menu-close"),
     menu = document.querySelector(".header__menu");
@@ -47,7 +48,7 @@ try {
                 spaceBetween: 5
             },
             1920: {
-
+                slidesPerView: 3,
                 spaceBetween: 35
             }
         },

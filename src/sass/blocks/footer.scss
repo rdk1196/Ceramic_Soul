@@ -1,10 +1,10 @@
 @use "/src/sass/base/variables.scss" as *;
 
-.spaced {
-    margin-top: 60px;
-}
+
 
 .footer {
+    padding: 50px 0;
+    background-color: $dark;
 
     .just-validate-error-field {
         border: none;
@@ -16,7 +16,11 @@
         }
     }
 
-    background-color: $dark;
+
+
+    &__spaced {
+        margin-top: 110px;
+    }
 
     &__wrapper {
         padding-top: 50px;
